@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/test")
 public class TestController {
 	
+	// An end point for testing spring mvc
 	@RequestMapping("/test")
 	public String test() {
 		return "test-success";
