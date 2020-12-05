@@ -21,17 +21,27 @@
 		<div id="content">
 		<input type="button" value="Add Customer"
 			   onclick="window.location.href='showFormForAdd'" class="add-button" />
+		<form action="search" method="GET">
+			Search Customers: <input type="text" name="searchKey">  
+			<input type="submit" value="Search" class="add-button">
+		</form>
 			<table>
 				<tr>
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Email</th>
+					<th>Action</th>
 				</tr>
 				<c:forEach var="customer" items="${customers}">
 				<tr>
 					<td>${customer.fistName}</td>
 					<td>${customer.lastName}</td>
 					<td>${customer.email}</td>
+					<td>
+						<a href="${pageContext.request.contextPath}/customer/showFormForUpdate?customerId=${customer.id}">Update</a>
+						 | <a href="${pageContext.request.contextPath}/customer/delete?customerId=${customer.id}"
+						 	  onclick="if (!confirm('Are you sure to delete this customer ?')) return false">Delete</a>
+					</td>
 				</tr>
 				</c:forEach>
 			</table>

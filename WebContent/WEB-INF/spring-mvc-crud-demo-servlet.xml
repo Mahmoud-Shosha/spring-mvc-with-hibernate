@@ -31,9 +31,9 @@
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="org.postgresql.Driver" />
-        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/postgres" />
-        <property name="user" value="postgres" />
-        <property name="password" value="postgres" /> 
+        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/mahmoud" />
+        <property name="user" value="mahmoud" />
+        <property name="password" value="mahmoud" /> 
 
         <!-- these are connection pool properties for C3P0 -->
 		<property name="initialPoolSize" value="5"/>
